@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('DOMContentLoaded', (event) => {
     const todoInput = document.getElementById('newTodoInput');
     const todoAdd = document.getElementById('addTodoBtn');
     const todoList = document.getElementById('todoList');
@@ -6,10 +6,12 @@ document.addEventListener('DOMContentLoaded', () => {
     todoAdd.addEventListener('click', () => {
         const todoText = todoInput.value.trim();
 
-        if (todoText) {
+        if(todoText) {
             const todoItem = document.createElement('li');
             todoItem.textContent = todoText;
             todoList.appendChild(todoItem);
+
+            // clear the input field
             todoInput.value = '';
         }
     });
