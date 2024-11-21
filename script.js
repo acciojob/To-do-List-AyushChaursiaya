@@ -10,5 +10,6 @@ todoAdd.addEventListener('click', () => {
         const todoItem = document.createElement('li');
         todoItem.textContent = todoText;
         todoList.appendChild(todoItem);
+		todoInput.value = '';
     }
 })
